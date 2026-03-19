@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter,Routes,Route} from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import Login from './pages/login'
 import Navbar from './components/Navbar'
 import Home from './pages/home'
@@ -13,7 +13,7 @@ import ProtectedRoute from './ProtectedRoute'
 
 const App = () => {
   return (
-     <BrowserRouter>
+     <HashRouter>
      <ElderlyProvider>
     <Routes>
       <Route path="/login" element={<Login/>}/>
@@ -27,7 +27,7 @@ const App = () => {
         </Route>
     </Routes>
     </ElderlyProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
